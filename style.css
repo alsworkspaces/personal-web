@@ -1,0 +1,139 @@
+:root {
+  --blue-50:  #fffdf3; /* biru sangat muda untuk isi kotak */
+  --blue-200: #fdf8b9; /* biru muda untuk border */
+  --page-bg:  #ffffff; /* background halaman netral, bukan biru */
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--page-bg);
+  color: #0f172a;
+  display: block; /* Biar layout nggak di-flex */
+}
+
+.wrap {
+  max-width: 1000px; 
+  margin: 130px auto; /* Tengah horizontal */
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--blue-50);
+  border: 1px solid var(--blue-200);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.06);
+  overflow: hidden;
+  max-width: 700px; 
+  width: 100%; 
+  margin: 24px auto;
+  position: relative;
+}
+
+/* ================= Gambar Header ================= */
+.card-image {
+  width: 100%;
+  height: 140px; 
+  background-image: url("bunga.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ================= Foto Profil ================= */
+.profile-pic {
+  width: 100px; 
+  height: 100px;
+  background-image: url("bunga.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* ================= Konten ================= */
+.card-content {
+  padding: 8px 20px 8px 30px; /* top right bottom left */
+  text-align: left;
+}
+
+/* Nama Utama */
+.title {
+  font-size: 1.4rem;   
+  font-weight: 700;
+  margin: 8px 0 4px;
+  color: #222;
+}
+
+/* Username */
+.handle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;         
+}
+
+/* Teks biasa */
+.line {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  color: #333;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 0.85rem;
+  color: #999;         
+  margin-top: 8px;
+}
+
+/* ================= Kotak Putih ================= */
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0 20px 16px 20px;
+}
+
+.box {
+  background: white;
+  border: 1px solid var(--blue-200);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%; 
+  }
+  .profile-pic {
+    width: 100px; 
+    height: 100px;
+    top: 100px;
+    right: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image {
+    height: 140px;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    right: 65px;
+  }
+}
