@@ -1,6 +1,6 @@
 :root {
   --blue-50:  #fffdf3; /* biru sangat muda untuk isi kotak */
-  --blue-200: #fdf8b9; /* biru muda untuk border */
+  --blue-200: #f4ed8f; /* biru muda untuk border */
   --page-bg:  #ffffff; /* background halaman netral, bukan biru */
 }
 
@@ -51,10 +51,10 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
   position: absolute;
   top: 100px;
-  right: 60px;
+  right: clamp(10px, 5%, 40px); /* fleksibel: min 10px, ideal 5%, max 40px */
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
