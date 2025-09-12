@@ -115,9 +115,9 @@ body {
     max-width: 90%; 
   }
   .profile-pic {
-    width: 85px; 
-    height: 85px;
-    top: 100px;
+    width: 65px; 
+    height: 65px;
+    top: 90px;
     right: 40px;
   }
 }
