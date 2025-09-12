@@ -9,7 +9,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2" />
+
+<!-- Auto cache-busting CSS -->
+<script>
+  const today = new Date();
+  const version = today.getFullYear().toString() + 
+                  (today.getMonth() + 1).toString().padStart(2, '0') + 
+                  today.getDate().toString().padStart(2, '0');
+  document.write('<link rel="stylesheet" href="style.css?v=' + version + '">');
+</script>
+
 </head>
 
 <body>
