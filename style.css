@@ -54,7 +54,7 @@ body {
   border: 3px solid white;
   position: absolute;
   top: 100px;
-  right: clamp(10px, 5%, 40px); /* fleksibel: min 10px, ideal 5%, max 40px */
+  right: 16px; /* selalu 16px dari kanan */
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
@@ -137,3 +137,13 @@ body {
     right: 65px;
   }
 }
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    top: 90px;
+    right: 12px; /* lebih kecil di mobile */
+  }
+}
+
