@@ -1,6 +1,6 @@
 :root {
   --blue-50:  #fffdf3; /* biru sangat muda untuk isi kotak */
-  --blue-200: #000000; /* biru muda untuk border */
+  --blue-200: #fff7a0; /* biru muda untuk border */
   --page-bg:  #ffffff; /* background halaman netral, bukan biru */
 }
 
@@ -29,6 +29,7 @@ body {
   width: 100%;
   max-width: 1000px;
   padding: 16px;
+  transform: translateY(-20px); /* naik 30px */
 }
 
 .card {
@@ -60,7 +61,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid #ffffff;
   position: absolute;
   top: 100px;
   right: 70px; /* selalu konsisten */
