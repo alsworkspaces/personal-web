@@ -13,13 +13,17 @@ body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--page-bg);
   color: #0f172a;
-  display: block;
+  min-height: 100vh;             /* full tinggi layar */
+  display: flex;                 /* aktifin flexbox */
+  justify-content: center;       /* center horizontal */
+  align-items: center;           /* center vertikal */
 }
 
 .wrap {
-  max-width: 1000px; 
-  margin: 130px auto; 
-  padding: 0 16px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 16px;
+  margin: 0; /* hapus margin-top 130px */
 }
 
 .card {
