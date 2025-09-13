@@ -8,22 +8,27 @@
   box-sizing: border-box; 
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;       /* matiin scroll */
+}
+
+body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--page-bg);
   color: #0f172a;
-  min-height: 100vh;             /* full tinggi layar */
-  display: flex;                 /* aktifin flexbox */
-  justify-content: center;       /* center horizontal */
-  align-items: center;           /* center vertikal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;          /* tinggi = layar penuh */
 }
 
 .wrap {
   width: 100%;
   max-width: 1000px;
   padding: 16px;
-  margin: 0; /* hapus margin-top 130px */
 }
 
 .card {
