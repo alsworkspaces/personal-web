@@ -12,7 +12,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;       /* matiin scroll */
+  overflow: hidden; /* matiin scroll */
 }
 
 body {
@@ -22,14 +22,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;          /* tinggi = layar penuh */
+  height: 100vh; /* tinggi = layar penuh */
 }
 
 .wrap {
   width: 100%;
-  max-width: 1000px;
   padding: 16px;
-  transform: translateY(-40px);
+  margin: 60px auto; /* baseline dari mobile */
 }
 
 .card {
@@ -38,74 +37,70 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(15,23,42,.06);
   overflow: hidden;
-  max-width: 700px; 
+  max-width: 95%;  /* default mobile */
   width: 100%; 
-  margin: 24px auto;
+  margin: 16px auto;
   position: relative;
 }
 
-/* ================= Gambar Header ================= */
 .card-image {
   width: 100%;
-  height: 140px; 
+  height: 100px; /* default mobile */
   background-image: url("img/sunset.jpg");
   background-size: cover;
   background-position: center;
 }
 
-/* ================= Foto Profil ================= */
 .profile-pic {
-  width: 120px; 
-  height: 120px;
+  width: 100px;
+  height: 100px;
   background-image: url("img/me.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
   border: 1px solid #ffffff;
   position: absolute;
-  top: 100px;
-  right: 70px; /* selalu konsisten */
+  top: 70px;  /* default mobile */
+  right: 30px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-/* ================= Konten ================= */
 .card-content {
-  padding: 8px 20px 5px 30px; 
+  padding: 8px 0 1px 20px; 
   text-align: left;
 }
 
 .title {
-  font-size: 1.4rem;   
+  font-size: 1.2rem;   
   font-weight: 700;
   margin: 8px 0 4px;
   color: #222;
 }
 
 .handle {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #666;         
 }
 
 .line {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin: 4px 0;
   color: #333;
 }
 
 .subtitle {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #999;         
   margin-top: 8px;
 }
 
-/* ================= Kotak Putih ================= */
 .box-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom di mobile */
   gap: 8px;
   margin-top: 16px;
-  padding: 0px 20px 16px 20px;
+  padding: 0 20px 16px 20px;
 }
 
 .box {
@@ -114,51 +109,48 @@ body {
   border-radius: 8px;
   padding: 12px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: bold;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+/* ====== DESKTOP (layar >= 1024px) ====== */
+@media (min-width: 700px) {
   .wrap {
-    margin: 80px auto; /* biar ga terlalu turun */
+    max-width: 1000px; /* biar ada space kiri-kanan */
+    margin: 100px auto; /* naikin dikit dari bawah */
+    padding: 0 32px;
   }
-  .card {
-    max-width: 95%;
-    margin: 16px auto;
-  }
-  .profile-pic {
-    width: 80px;
-    height: 80px;
-    top: 100px;
-    right: 20px; /* lebih rapet */
-  }
-  .title {
-    font-size: 1.2rem;
-  }
-  .handle {
-    font-size: 0.9rem;
-  }
-  .line {
-    font-size: 0.9rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .wrap {
-    margin: 60px auto;
+  .card {
+    max-width: 700px;  /* biar kartu nggak full */
+    margin: 24px auto;
   }
+
   .card-image {
-    height: 100px; /* biar header ga terlalu tinggi */
+    height: 150px; /* header lebih tinggi di desktop */
   }
+
   .profile-pic {
-    width: 100px;
-    height: 100px;
-    top: 70px;
-    right: 30px;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    right: 70px;
   }
-  .card-content {
-    padding: 8px 0 1px 20px;
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .handle {
+    font-size: 1rem;
+  }
+
+  .line {
+    font-size: 0.95rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
   }
 }
