@@ -28,7 +28,7 @@ body {
 .wrap {
   width: 100%;
   padding: 16px;
-  margin: 60px auto; /* baseline dari mobile */
+  transform: translateY(-30px); /* ini pasti ngaruh */
 }
 
 .card {
@@ -66,7 +66,7 @@ body {
 }
 
 .card-content {
-  padding: 8px 0 1px 20px; 
+  padding: 8px 20px 1px 20px;  /* kiri-kanan sama */
   text-align: left;
 }
 
@@ -97,21 +97,48 @@ body {
 
 .box-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom di mobile */
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   margin-top: 16px;
-  padding: 0 20px 16px 20px;
+  padding: 0 0 16px 0;  /* kiri-kanan ikut dari .card-content */
+  justify-items: stretch;
+}
+
+/* ==== BOX BUTTON ==== */
+.box,
+.box:link,
+.box:visited {
+  color: #2f2f2f;                /* teks putih */
+  text-decoration: none;       /* tanpa underline */
+  display: flex;               /* biar teks ketengah */
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
-  background: white;
+  background: #ffffff;
   border: 1px solid var(--blue-200);
   border-radius: 8px;
   padding: 12px;
   text-align: center;
   font-size: 0.8rem;
   font-weight: bold;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  cursor: pointer;                  
+  transition: all 0.2s ease-in-out; 
+}
+
+.box:hover {
+  background: linear-gradient(135deg, #fff8e1, #ffffff); /* hover lebih terang */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid var(--blue-200);
+  transform: translateY(-2px);
+}
+
+.box:active {
+  transform: scale(0.97);           
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  color: #ffffff;
 }
 
 /* ====== DESKTOP (layar >= 700px) ====== */
