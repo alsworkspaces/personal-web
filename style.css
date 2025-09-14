@@ -28,7 +28,7 @@ body {
 .wrap {
   width: 100%;
   padding: 16px;
-  transform: translateY(-50px); /* ini pasti ngaruh */
+  transform: translateY(-50px); 
 }
 
 .card {
@@ -37,7 +37,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(15,23,42,.06);
   overflow: hidden;
-  max-width: 95%;  /* default mobile */
+  max-width: 95%;
   width: 100%; 
   margin: 16px auto;
   position: relative;
@@ -45,7 +45,7 @@ body {
 
 .card-image {
   width: 100%;
-  height: 120px; /* default mobile */
+  height: 120px; 
   background-image: url("img/sunset.jpg");
   background-size: cover;
   background-position: center;
@@ -60,13 +60,13 @@ body {
   border-radius: 50%;
   border: 1px solid #ffffff;
   position: absolute;
-  top: 70px;  /* default mobile */
+  top: 70px;  
   right: 30px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
 .card-content {
-  padding: 8px 20px 1px 20px;  /* kiri-kanan sama */
+  padding: 8px 20px 1px 20px;
   text-align: left;
 }
 
@@ -100,7 +100,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   margin-top: 16px;
-  padding: 0 0 16px 0;  /* kiri-kanan ikut dari .card-content */
+  padding: 0 0 16px 0; 
   justify-items: stretch;
 }
 
@@ -108,9 +108,9 @@ body {
 .box,
 .box:link,
 .box:visited {
-  color: #2f2f2f;                /* teks putih */
-  text-decoration: none;       /* tanpa underline */
-  display: flex;               /* biar teks ketengah */
+  color: #2f2f2f; 
+  text-decoration: none; 
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
@@ -129,7 +129,7 @@ body {
 }
 
 .box:hover {
-  background: linear-gradient(130deg, #ffffff, #fff9e5); /* hover lebih terang */
+  background: linear-gradient(130deg, #ffffff, #fff9e5);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   border: 1px solid var(--blue-200);
   transform: translateY(-2px);
@@ -141,42 +141,53 @@ body {
   color: #ffffff;
 }
 
-/* Konten tambahan */
+/* Konten tambahan animasi */
 .extra-content {
   margin-top: 0px;
-  font-size: 0.9rem; /* sama kayak .line */
+  font-size: 0.9rem;
   color: #333;
   overflow: hidden;
-  max-height: 0;          /* trik animasi */
-  opacity: 0;             /* biar ada efek fade */
+  max-height: 0;
+  opacity: 0;
   transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.3s ease;
 }
 
 .extra-content.show {
-  max-height: 100px;      /* cukup tinggi buat teks */
+  max-height: 150px;
   opacity: 1;
   margin-left: 8px;
 }
 
-.hidden {
-  display: none; /* jangan pakai ini lagi untuk animasi */
+/* Hilangin efek fokus biru */
+a:focus, a:active {
+  outline: none;
+  box-shadow: none;
 }
 
-/* ====== DESKTOP (layar >= 700px) ====== */
+.box, 
+.box:focus, 
+.box:active, 
+.box:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* ====== DESKTOP (>=700px) ====== */
 @media (min-width: 700px) {
   .wrap {
-    max-width: 1000px; /* biar ada space kiri-kanan */
-    margin: 100px auto; /* naikin dikit dari bawah */
+    max-width: 1000px; 
+    margin: 100px auto;
     padding: 0 32px;
   }
 
   .card {
-    max-width: 700px;  /* biar kartu nggak full */
+    max-width: 700px;
     margin: 24px auto;
   }
 
   .card-image {
-    height: 150px; /* header lebih tinggi di desktop */
+    height: 150px;
   }
 
   .profile-pic {

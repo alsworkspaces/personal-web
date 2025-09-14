@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alisha Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alisha Page</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-<script>
-  const version = Date.now(); 
-  document.write('<link rel="stylesheet" href="style.css?v=' + version + '">');
-</script>
+  <!-- CSS -->
+  <script>
+    const version = Date.now();
+    document.write('<link rel="stylesheet" href="style.css?v=' + version + '">');
+  </script>
 </head>
 
 <body>
@@ -27,29 +29,21 @@
       <p class="subtitle">Sharing some of my TMI here!</p>
       
       <div class="box-grid">
-        <a href="#" id="btn1" class="box">Text1</a>
-        <a href="#" class="box">Text2</a>
-        <a href="#" class="box">Text3</a>
-        <a href="#" class="box">Text4</a>
+        <a href="#" class="box" data-text="Hi guys!">Text1</a>
+        <a href="#" class="box" data-text="This is box 2">Text2</a>
+        <a href="#" class="box" data-text="Another message here">Text3</a>
+        <a href="#" class="box" data-text="Last box clicked!">Text4</a>
       </div>
 
-      <!-- Konten tambahan di dalam card -->
+      <!-- Konten tambahan -->
       <div id="extraContent" class="extra-content">
-        <p>Hi guys!</p>
+        <p id="extraText"></p>
       </div>
     </div>
   </div>
 </main>
 
-<script>
-  const btn1 = document.getElementById('btn1');
-  const extraContent = document.getElementById('extraContent');
-
-  btn1.addEventListener('click', function(e) {
-    e.preventDefault();
-    extraContent.classList.toggle('show');
-  });
-</script>
-
+<!-- Script -->
+<script src="script.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
