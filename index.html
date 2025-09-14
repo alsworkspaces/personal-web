@@ -3,39 +3,53 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Alisha PAge</title>
+<title>Alisha Page</title>
 
-  <!-- Font: Inter (utama) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Auto cache-busting CSS -->
 <script>
-  const version = Date.now(); // hasilnya unik tiap reload
+  const version = Date.now(); 
   document.write('<link rel="stylesheet" href="style.css?v=' + version + '">');
 </script>
-
 </head>
 
 <body>
-    <main class="wrap">
-    <div class="card">
-        <div class="card-image"></div>
-         <!-- Lingkaran berisi gambar -->
-            <div class="profile-pic"></div>
-        <div class="card-content">
-            <h1 class="title">Alisha! <span class="handle">@alizhr.s</span></h1>
-            <p class="line">Hi someone out there! ( ´ ▽ ` )/</p>
-            <p class="line">Just a mini profile of me, ig..</p>
-            <p class="subtitle">Sharing some of my TMI here!</p>
-        <div class="box-grid">
-            <a href="#" class="box">Text1</a>
-            <a href="#" class="box">Text2</a>
-            <a href="#" class="box">Text3</a>
-            <a href="#" class="box">Text4</a>
-        </div>
+<main class="wrap">
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="profile-pic"></div>
+    <div class="card-content">
+      <h1 class="title">Alisha! <span class="handle">@alizhr.s</span></h1>
+      <p class="line">Hi someone out there! ( ´ ▽ ` )/</p>
+      <p class="line">Just a mini profile of me, ig..</p>
+      <p class="subtitle">Sharing some of my TMI here!</p>
+      
+      <div class="box-grid">
+        <a href="#" id="btn1" class="box">Text1</a>
+        <a href="#" class="box">Text2</a>
+        <a href="#" class="box">Text3</a>
+        <a href="#" class="box">Text4</a>
+      </div>
+
+      <!-- Konten tambahan di dalam card -->
+      <div id="extraContent" class="extra-content">
+        <p>Hi guys!</p>
+      </div>
     </div>
-    </main>
+  </div>
+</main>
+
+<script>
+  const btn1 = document.getElementById('btn1');
+  const extraContent = document.getElementById('extraContent');
+
+  btn1.addEventListener('click', function(e) {
+    e.preventDefault();
+    extraContent.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>

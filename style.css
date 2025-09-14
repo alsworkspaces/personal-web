@@ -28,7 +28,7 @@ body {
 .wrap {
   width: 100%;
   padding: 16px;
-  transform: translateY(-45px); /* ini pasti ngaruh */
+  transform: translateY(-50px); /* ini pasti ngaruh */
 }
 
 .card {
@@ -129,7 +129,7 @@ body {
 }
 
 .box:hover {
-  background: linear-gradient(135deg, #fff8e1, #ffffff); /* hover lebih terang */
+  background: linear-gradient(130deg, #ffffff, #fff9e5); /* hover lebih terang */
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   border: 1px solid var(--blue-200);
   transform: translateY(-2px);
@@ -139,6 +139,27 @@ body {
   transform: scale(0.97);           
   box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   color: #ffffff;
+}
+
+/* Konten tambahan */
+.extra-content {
+  margin-top: 0px;
+  font-size: 0.9rem; /* sama kayak .line */
+  color: #333;
+  overflow: hidden;
+  max-height: 0;          /* trik animasi */
+  opacity: 0;             /* biar ada efek fade */
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.3s ease;
+}
+
+.extra-content.show {
+  max-height: 100px;      /* cukup tinggi buat teks */
+  opacity: 1;
+  margin-left: 8px;
+}
+
+.hidden {
+  display: none; /* jangan pakai ini lagi untuk animasi */
 }
 
 /* ====== DESKTOP (layar >= 700px) ====== */
